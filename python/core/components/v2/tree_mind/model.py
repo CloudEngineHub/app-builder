@@ -16,7 +16,7 @@
 """
 
 import proto
-from typing import List
+from typing import List, Optional
 from pydantic import BaseModel
 
 
@@ -38,8 +38,8 @@ class Info(BaseModel):
 class TreeMindResponse(BaseModel):
     errCode: str
     errMsg: str
-    time_diff: int
-    info: Info
+    time_diff: Optional[int] = None
+    info: Optional[Info] = None
 
 
 
